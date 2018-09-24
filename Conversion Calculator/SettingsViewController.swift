@@ -15,8 +15,10 @@ protocol SettingsViewControllerDelegate {
 class SettingsViewController: UIViewController {
    
     @IBOutlet weak var fromUnitLabel: UILabel!
-    
     @IBOutlet weak var toUnitLabel: UILabel!
+    
+    var fromU: String = ""
+    var toU: String = ""
     
     var selectedLabel: String = "from"
     var lengthMode: Bool?
@@ -42,8 +44,8 @@ class SettingsViewController: UIViewController {
         }
         self.picker.delegate = self
         self.picker.dataSource = self
-        self.fromUnitLabel.text = pickerData[1]
-        self.toUnitLabel.text = pickerData[0]
+        self.fromUnitLabel.text = fromU
+        self.toUnitLabel.text = toU
     }
 
     override func didReceiveMemoryWarning() {

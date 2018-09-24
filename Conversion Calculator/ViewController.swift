@@ -100,6 +100,9 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
         let settingsVC = navVC?.viewControllers.first as! SettingsViewController
         settingsVC.delegate = self
         settingsVC.lengthMode = self.lengthMode
+        settingsVC.fromU = self.fromUnitLabel.text!
+        settingsVC.toU = self.toUnitLabel.text!
+
     }
     
     
