@@ -87,8 +87,7 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>,
-                               with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (selectedLabel == "from"){
             fromUnitLabel.text = self.choice
         }
