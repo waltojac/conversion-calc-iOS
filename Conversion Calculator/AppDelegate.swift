@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let BACKGROUND_COLOR = UIColor.purple
+    let FOREGROUND_COLOR = UIColor.cyan
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        application.statusBarStyle = UIStatusBarStyle.lightContent
+        
+        let navAppearance = UINavigationBar.appearance()
+        navAppearance.barTintColor = BACKGROUND_COLOR
+        navAppearance.tintColor = FOREGROUND_COLOR
+        navAppearance.isTranslucent = true
+        navAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor : FOREGROUND_COLOR]
         return true
     }
 
