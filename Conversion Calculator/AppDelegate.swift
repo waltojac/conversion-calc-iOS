@@ -8,14 +8,13 @@
 
 import UIKit
 
+let BACKGROUND_COLOR = UIColor.purple
+let FOREGROUND_COLOR = UIColor.cyan
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    let BACKGROUND_COLOR = UIColor.purple
-    let FOREGROUND_COLOR = UIColor.cyan
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
