@@ -16,6 +16,7 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     
     var lengthMode: Bool = true
+    var entries : [Conversion] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,11 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
                 let convKey =  LengthConversionKey(toUnits: toEnum, fromUnits: fromEnum)
                 fromTextField.text = String(Double(toTextField.text!)! * lengthConversionTable[convKey]!);
             }
+            if (fromTextField.text != "") {
+                let mod = Conversion(fromVal: Double(fromTextField.text!)!, toVal:
+                    Double(toTextField.text!)!, mode: CalculatorMode.Length, fromUnits: fromUnitLabel.text!, toUnits: toUnitLabel.text!, timestamp: Date());
+                entries.append(mod);
+            }
         }
             
         // for volume mode
@@ -93,17 +99,22 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
                 let convKey =  VolumeConversionKey(toUnits: toEnum, fromUnits: fromEnum)
                 fromTextField.text = String(Double(toTextField.text!)! * volumeConversionTable[convKey]!);
             }
+            if (fromTextField.text != "") {
+                let mod = Conversion(fromVal: Double(fromTextField.text!)!, toVal:
+                    Double(toTextField.text!)!, mode: CalculatorMode.Volume, fromUnits: fromUnitLabel.text!, toUnits: toUnitLabel.text!, timestamp: Date());
+                entries.append(mod);
+            }
+            
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let navVC = segue.destination as? UINavigationController
-        let settingsVC = navVC?.viewControllers.first as! SettingsViewController
-        settingsVC.delegate = self
-        settingsVC.lengthMode = self.lengthMode
-        settingsVC.fromU = self.fromUnitLabel.text!
-        settingsVC.toU = self.toUnitLabel.text!
-
+        if let settingsVC = segue.destination as? SettingsViewController {
+            settingsVC.delegate = self
+            settingsVC.lengthMode = self.lengthMode
+            settingsVC.fromU = self.fromUnitLabel.text!
+            settingsVC.toU = self.toUnitLabel.text!
+        }
     }
     
     

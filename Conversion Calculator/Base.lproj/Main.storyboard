@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HNz-e5-V0G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mj1-qj-6Li">
-                                <rect key="frame" x="8" y="28" width="359" height="150"/>
+                                <rect key="frame" x="8" y="72" width="359" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length Conversion Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXK-cu-NNm" customClass="ConversionCalcLabel" customModule="Conversion_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
@@ -84,28 +84,21 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzs-dO-FUR" customClass="ConversionCalcButton" customModule="Conversion_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="8" y="186" width="94" height="30"/>
+                                <rect key="frame" x="8" y="230" width="94" height="30"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpf-rW-69v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igq-E0-RgR" customClass="ConversionCalcButton" customModule="Conversion_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="273.5" y="186" width="93.5" height="30"/>
+                                <rect key="frame" x="273.5" y="230" width="93.5" height="30"/>
                                 <state key="normal" title="Mode"/>
                                 <connections>
                                     <action selector="modeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHk-Zr-qw8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA5-GM-djS" customClass="ConversionCalcButton" customModule="Conversion_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="140.5" y="617" width="94" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="cG5-9L-4qH" kind="show" id="W5T-zA-DDl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-f2-6sQ" customClass="ConversionCalcButton" customModule="Conversion_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="140.5" y="186" width="94" height="30"/>
+                                <rect key="frame" x="140.5" y="230" width="94" height="30"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pms-ac-e2f"/>
@@ -116,7 +109,6 @@
                         <constraints>
                             <constraint firstItem="lzs-dO-FUR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="6Tx-p4-dCj"/>
                             <constraint firstItem="UKE-f2-6sQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="6ww-Dl-H5M"/>
-                            <constraint firstItem="eA5-GM-djS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="7vv-yi-f4Y"/>
                             <constraint firstItem="mj1-qj-6Li" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="B0G-FU-8uB"/>
                             <constraint firstItem="Igq-E0-RgR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="GIH-74-2gr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mj1-qj-6Li" secondAttribute="trailing" constant="8" id="LrA-rI-6ei"/>
@@ -124,14 +116,24 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Igq-E0-RgR" secondAttribute="trailing" constant="8" id="MCc-zA-EWI"/>
                             <constraint firstItem="Igq-E0-RgR" firstAttribute="top" secondItem="mj1-qj-6Li" secondAttribute="bottom" constant="8" id="MSD-BJ-L5f"/>
                             <constraint firstItem="mj1-qj-6Li" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="WUf-oz-LfZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eA5-GM-djS" secondAttribute="bottom" constant="20" id="onH-LN-1VW"/>
                             <constraint firstItem="lzs-dO-FUR" firstAttribute="top" secondItem="mj1-qj-6Li" secondAttribute="bottom" constant="8" id="rEU-df-le6"/>
                             <constraint firstItem="UKE-f2-6sQ" firstAttribute="top" secondItem="mj1-qj-6Li" secondAttribute="bottom" constant="8" id="szb-kw-z4k"/>
                             <constraint firstItem="UKE-f2-6sQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xSJ-0S-bNJ"/>
-                            <constraint firstItem="eA5-GM-djS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zLC-ZY-MJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VVo-N9-6Oq">
+                        <barButtonItem key="leftBarButtonItem" title="History" id="ltV-9y-R2G">
+                            <connections>
+                                <segue destination="RhM-pg-s4Q" kind="show" identifier="historySegue" id="5Tw-Sg-brD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Lic-jO-QGx">
+                            <connections>
+                                <segue destination="ReO-zV-MOg" kind="show" identifier="settingsSegue" id="Ce8-YL-Hqr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fromTextField" destination="Abm-mw-mQh" id="8W7-tk-78q"/>
                         <outlet property="fromUnitLabel" destination="2Ky-MH-dD8" id="gu2-eq-dek"/>
@@ -142,7 +144,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="2180" y="132.68365817091455"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="3eV-vk-Kc7">
+            <objects>
+                <tableViewController id="RhM-pg-s4Q" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nBI-bm-WnV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellId" textLabel="t6I-m1-viu" detailTextLabel="sGv-NB-0qS" style="IBUITableViewCellStyleSubtitle" id="2IZ-3d-aGh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2IZ-3d-aGh" id="5Mh-2B-0Qz">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t6I-m1-viu">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sGv-NB-0qS">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RhM-pg-s4Q" id="z1R-hT-soV"/>
+                            <outlet property="delegate" destination="RhM-pg-s4Q" id="BtD-6h-W4Y"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ww-xj-MxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="-676"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GKM-Ny-mp4">
@@ -248,23 +294,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1708" y="132.68365817091455"/>
+            <point key="canvasLocation" x="3015.1999999999998" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="NLk-W6-BTe">
+        <scene sceneID="5eA-oy-Ffy">
             <objects>
-                <navigationController id="cG5-9L-4qH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="foh-H3-bP4">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HNz-e5-V0G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r0s-Ts-0A7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ReO-zV-MOg" kind="relationship" relationship="rootViewController" id="r49-aa-vWZ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T7l-uJ-owL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lIL-8i-D4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="md0-Vi-YP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="133"/>
+            <point key="canvasLocation" x="1240.8" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

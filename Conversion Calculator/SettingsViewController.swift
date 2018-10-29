@@ -72,14 +72,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        _  = self.navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {
         if let d = self.delegate {
             d.unitPickerSelection(toUnit: toUnitLabel.text!, fromUnit: fromUnitLabel.text!)
         }
-        self.dismiss(animated: true, completion: nil)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 
     
