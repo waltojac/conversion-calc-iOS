@@ -115,7 +115,11 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
             settingsVC.fromU = self.fromUnitLabel.text!
             settingsVC.toU = self.toUnitLabel.text!
         }
+        if let historyVC = segue.destination as? HistoryTableViewController {
+            historyVC.entries = self.entries
+        }
     }
+    
     
     
 }

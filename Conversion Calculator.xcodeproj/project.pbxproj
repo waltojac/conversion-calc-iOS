@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845A7B0A218A18BA0026AD2E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A7B09218A18BA0026AD2E /* HistoryTableViewController.swift */; };
 		847CCBFE2162AFA800C69543 /* ConversionCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CCBFD2162AFA800C69543 /* ConversionCalcTextField.swift */; };
 		847CCC002162B33A00C69543 /* ConversionCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CCBFF2162B33A00C69543 /* ConversionCalcLabel.swift */; };
 		847CCC022162B3C100C69543 /* ConversionCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CCC012162B3C100C69543 /* ConversionCalcButton.swift */; };
@@ -21,7 +22,6 @@
 		84C26F542150191000679C7C /* Conversion_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C26F532150191000679C7C /* Conversion_CalculatorUITests.swift */; };
 		84C26F752150205A00679C7C /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C26F742150205A00679C7C /* DecimalMinusTextField.swift */; };
 		84FE809C21877567009A8483 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE809B21877567009A8483 /* Conversion.swift */; };
-		84FE809E2187800E009A8483 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE809D2187800E009A8483 /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		845A7B09218A18BA0026AD2E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		847CCBFD2162AFA800C69543 /* ConversionCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcTextField.swift; sourceTree = "<group>"; };
 		847CCBFF2162B33A00C69543 /* ConversionCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcLabel.swift; sourceTree = "<group>"; };
 		847CCC012162B3C100C69543 /* ConversionCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcButton.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		84C26F552150191000679C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C26F742150205A00679C7C /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		84FE809B21877567009A8483 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
-		84FE809D2187800E009A8483 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 				847CCBFF2162B33A00C69543 /* ConversionCalcLabel.swift */,
 				847CCC012162B3C100C69543 /* ConversionCalcButton.swift */,
 				84FE809B21877567009A8483 /* Conversion.swift */,
-				84FE809D2187800E009A8483 /* HistoryTableViewController.swift */,
+				845A7B09218A18BA0026AD2E /* HistoryTableViewController.swift */,
 			);
 			path = "Conversion Calculator";
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				84C26F752150205A00679C7C /* DecimalMinusTextField.swift in Sources */,
 				847CCC022162B3C100C69543 /* ConversionCalcButton.swift in Sources */,
 				84FE809C21877567009A8483 /* Conversion.swift in Sources */,
-				84FE809E2187800E009A8483 /* HistoryTableViewController.swift in Sources */,
+				845A7B0A218A18BA0026AD2E /* HistoryTableViewController.swift in Sources */,
 				84C26F362150190E00679C7C /* ViewController.swift in Sources */,
 				847CCC002162B33A00C69543 /* ConversionCalcLabel.swift in Sources */,
 				847FEEC42155739200790E82 /* UnitsAndModes.swift in Sources */,
