@@ -8,7 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController, SettingsViewControllerDelegate {
+class ViewController: UIViewController, SettingsViewControllerDelegate, HistoryTableViewControllerDelegate {
+    
+    
+    func selectEntry(entry: Conversion) {
+        toTextField.text = String(entry.toVal)
+        fromTextField.text = String(entry.fromVal)
+        toUnitLabel.text = entry.toUnits
+        fromUnitLabel.text = entry.fromUnits
+        if (entry.mode == CalculatorMode.Length) {
+            lengthMode = true
+        } else {
+            lengthMode = false
+        }
+    }
+    
     @IBOutlet weak var toTextField: DecimalMinusTextField!
     @IBOutlet weak var fromTextField: DecimalMinusTextField!
     @IBOutlet weak var fromUnitLabel: UILabel!
@@ -35,6 +49,10 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
+        //clear focus of cursors
+        toTextField.resignFirstResponder()
+        fromTextField.resignFirstResponder()
+        
         toTextField.text = ""
         fromTextField.text = ""
     }
@@ -64,6 +82,10 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     
     
     @IBAction func calculate(_ sender: UIButton) {
+        //clear focus of cursors
+        toTextField.resignFirstResponder()
+        fromTextField.resignFirstResponder()
+        
         //for length mode
         if (lengthMode){
             if (fromTextField.text != ""){
@@ -116,6 +138,7 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
             settingsVC.toU = self.toUnitLabel.text!
         }
         if let historyVC = segue.destination as? HistoryTableViewController {
+            historyVC.historyDelegate = self
             historyVC.entries = self.entries
         }
     }

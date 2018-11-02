@@ -8,8 +8,8 @@
 
 import UIKit
 
-let BACKGROUND_COLOR = UIColor.white
-let FOREGROUND_COLOR = UIColor.blue
+let BACKGROUND_COLOR = UIColor(red: 0, green: 0.7882, blue: 0.9882, alpha: 1.0)
+let FOREGROUND_COLOR = UIColor(red: 1, green: 0.9647, blue: 0, alpha: 1.0)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
